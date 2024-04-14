@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -41,7 +44,6 @@ ol {
   width: 1140px;
   display: flex;
   align-items: end;
-  margin: 133px 30px;
   gap: 0 30px;
 }
 
@@ -63,13 +65,13 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
-  height: 54px;
   display: grid;
   grid-template-columns: 225px 212px 1fr;
-  grid-template-rows: 54px;
+  grid-template-rows: 1fr;
   gap: 0 40px;
 }
 
@@ -87,6 +89,7 @@ ol {
   width: fit-content;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 0 5px;
   cursor: pointer;
 }
@@ -187,9 +190,6 @@ ol {
 
 .content__list-item {
   width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .content__card-link {
@@ -220,7 +220,7 @@ ol {
 
 .content__card-link:hover .content__video-card-description-container {
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 1px;
 }
 
 .content__card-link:active {
@@ -229,6 +229,10 @@ ol {
 
 .content__card-link:active .content__video-card-description-container {
   text-decoration: none;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__list-item:not(:last-child) {
@@ -248,14 +252,19 @@ ol {
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
 }
 
 .content__video-card-description {
   width: 200px;
-  height: 65px;
   font-weight: 400;
   font-size: 18px;
   line-height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
 }
 
 .more-button {
